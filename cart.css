@@ -1,0 +1,145 @@
+Base Styles body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cart Items Container */
+#cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Single Cart Item */
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+/* Product Info */
+.cart-item .item-info {
+  flex: 1 1 30%;
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 30px;
+}
+
+/* Price Info */
+.cart-item .item-price {
+  flex: 1 1 25%;
+  font-weight: 900;
+  color: #15803d;
+  font-size: 21px;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 25%;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background-color: #0f5132;
+}
+
+.quantity-controls span {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Remove Button */
+.cart-item .remove-btn {
+  flex: 1 1 10%;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-item .remove-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Actions Section */
+.actions {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.actions p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.actions button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.actions button:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .cart-item .item-info,
+  .cart-item .item-price,
+  .quantity-controls,
+  .cart-item .remove-btn {
+    flex: none;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .quantity-controls button {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- git remote add origin https://github.com/Sir-Syed-library/apnabageecha-.git
+git branch -M main
+git push -u origin main -->
+
+    <title>Apna Bageecha</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <p>Apna Bageecha me aapka swagat hai</p>
+    </div>
+
+    <!-- Cart Icon Section -->
+    <!-- Cart Icon Button -->
+    <div id="cartIcon" onclick="window.location.href='cart.html'">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-text">CART</span>
+      <span id="cartCount">0</span>
+    </div>
+
+    <div class="filters">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by product name"
+      />
+
+      <div class="filters-selects">
+        <select id="sortSelect">
+          <option value="default">Sort by</option>
+          <option value="low">Low to High Price</option>
+          <option value="high">High to Low Price</option>
+        </select>
+
+        <select id="categorySelect">
+          <option value="all">All Categories</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Indoor">Indoor</option>
+          <option value="herbs">Herbs</option>
+          <option value="kitchen">Kitchen</option>
+          <option value="flowering">Flowering</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product 1 -->
+    <div class="product-grid-container">
+      <div class="product-grid" id="productGrid">
+        <!-- Indoorplants -->
+        <div
+          class="product-card"
+          data-name="ZZ plant"
+          data-price="49"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/z plan.jpg" alt="ZZ plant" />
+          </div>
+          <div class="product-content">
+            <h3>ZZ plant</h3>
+            <p>
+              Strong Indoor plant that grows in low light and needs little care.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹49</span>
+              <span class="old">₹70</span>
+            </p>
+            <button onclick="addToCart('ZZ plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="money plant"
+          data-price="54"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/money plant.jpg" alt="money plant" />
+          </div>
+          <div class="product-content">
+            <h3>money plant</h3>
+            <p>
+              Trailing plant believed to bring wealth and positivity, low
+              maintenance.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹54</span>
+              <span class="old">₹70</span>
+            </p>
+            <button onclick="addToCart('money plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Aloevera"
+          data-price="59"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/aloe vera.jpg" alt="Aloevera" />
+          </div>
+          <div class="product-content">
+            <h3>Aloevera</h3>
+            <p>
+              A versatile plant used for skin, hair, and internal healing
+              benefits.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹79</span>
+            </p>
+            <button onclick="addToCart('Aloevera')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Bambu Plant"
+          data-price="59"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/bambu.jpg" alt="Bambu Plant" />
+          </div>
+          <div class="product-content">
+            <h3>Bambu Plant</h3>
+            <p>Considered lucky, often used in Feng Shui and Indoor decor.</p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹89</span>
+            </p>
+            <button onclick="addToCart('Bambu Plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Syngonium"
+          data-price="49"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/Sangu niyam.jpg" alt="Syngonium" />
+          </div>
+          <div class="product-content">
+            <h3>Syngonium</h3>
+            <p>
+              Compact plant with red heart-shaped leaves, ideal for tabletops
+              and desks
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹49</span>
+              <span class="old">₹69</span>
+            </p>
+            <button onclick="addToCart('Syngonium')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Red Money Plant"
+          data-price="59"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/red money plant.jpg" alt="Red Money Plant" />
+          </div>
+          <div class="product-content">
+            <h3>Red Money Plant</h3>
+            <p>
+              Compact plant with red heart-shaped leaves, ideal for tabletops
+              and desks.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹79</span>
+            </p>
+            <button onclick="addToCart('Red Money Plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Spider Plant"
+          data-price="49"
+          data-category="Indoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/Spider.jpg" alt="Spider Plant" />
+          </div>
+          <div class="product-content">
+            <h3>Spider Plant</h3>
+            <p>Air-purifying plant that thrives with minimal care.</p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹49</span>
+              <span class="old">₹80</span>
+            </p>
+            <button onclick="addToCart('Spider Plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- floweringplant -->
+        <div
+          class="product-card"
+          data-name="Tecoma plant"
+          data-price="89"
+          data-category="flowering"
+        >
+          <div class="product-image-container">
+            <img src="Images/ticoma.jpg" alt="Tecoma plant" />
+          </div>
+          <div class="product-content">
+            <h3>Tecoma Plant</h3>
+            <p>Bright yellow trumpet-shaped flowers, adds beauty to gardens.</p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹89</span>
+              <span class="old">₹129</span>
+            </p>
+            <button onclick="addToCart('Tecoma plant')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Sadabahar"
+          data-price="69"
+          data-category="flowering"
+        >
+          <div class="product-image-container">
+            <img src="Images/Sada bahar.jpg" alt="Sadabahar" />
+          </div>
+          <div class="product-content">
+            <h3>Sadabahar</h3>
+            <p>Evergreen flowering plant that blooms year-round.</p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹69</span>
+              <span class="old">₹99</span>
+            </p>
+            <button onclick="addToCart('Sadabahar')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Naag Champa"
+          data-price="79"
+          data-category="flowering"
+        >
+          <div class="product-image-container">
+            <img src="Images/Naag champa.jpg" alt="Naag Champa" />
+          </div>
+          <div class="product-content">
+            <h3>Naag Champa</h3>
+            <p>
+              Fragrant traditional flowering plant, used in spiritual and
+              aromatic purposes.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹79</span>
+              <span class="old">₹149</span>
+            </p>
+            <button onclick="addToCart('Naag Champa')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Chhuimiu Do not Touch"
+          data-price="59"
+          data-category="flowering"
+        >
+          <div class="product-image-container">
+            <img src="Images/chhuimui.jpg" alt="Chhuimiu Do not Touch" />
+          </div>
+          <div class="product-content">
+            <h3>Chhuimiu Do not Touch</h3>
+            <p>
+              Sensitive plant that closes its leaves when touched, fun and
+              educational for kids
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹89</span>
+            </p>
+            <button onclick="addToCart('Chhuimui')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Outdoorplant-->
+        <div
+          class="product-card"
+          data-name="Coleus"
+          data-price="69"
+          data-category="Outdoor"
+        >
+          <div class="product-image-container">
+            <img src="Images/coliuos.jpg" alt="Coleus" />
+          </div>
+          <div class="product-content">
+            <h3>Coleus</h3>
+            <p>
+              Colorful foliage plant perfect for both Indoor and Outdoor
+              decoration.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹69</span>
+              <span class="old">₹99</span>
+            </p>
+            <button onclick="addToCart('Coleus')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- herbs-->
+        <div
+          class="product-card"
+          data-name="Shyam Tulsi "
+          data-price="29"
+          data-category="herbs"
+        >
+          <div class="product-image-container">
+            <img src="Images/Shayam tulsi.jpg" alt="Shyam Tulsi " />
+          </div>
+          <div class="product-content">
+            <h3>Shyam Tulsi</h3>
+            <p>
+              A holy medicinal plant known to boost immunity and relieve stress.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹29</span>
+              <span class="old">₹110</span>
+            </p>
+            <button onclick="addToCart('Shyam Tulsi ')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Lemon Grass"
+          data-price="59"
+          data-category="herbs"
+        >
+          <div class="product-image-container">
+            <img src="Images/Lemon grass.jpg" alt="Lemon Grass" />
+          </div>
+          <div class="product-content">
+            <h3>Lemon Grass</h3>
+            <p>
+              Aromatic herb used in tea and oils, known for aiding digestion and
+              relaxation.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹119</span>
+            </p>
+            <button onclick="addToCart('Lemon Grass')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Curry Leaves"
+          data-price="59"
+          data-category="herbs"
+        >
+          <div class="product-image-container">
+            <img src="Images/Kadi patta.jpg" alt="Curry Leaves" />
+          </div>
+          <div class="product-content">
+            <h3>Curry Leaves</h3>
+            <p>
+              Commonly used in Indian cooking, known for digestive and medicinal
+              benefits.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹59</span>
+              <span class="old">₹89</span>
+            </p>
+            <button onclick="addToCart('Curry Leaves')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- kitchenplant-->
+
+        <div
+          class="product-card"
+          data-name="ShyamaTulsi"
+          data-price="29"
+          data-category="kitchen"
+          data-category="herbs"
+        >
+          <div class="product-image-container">
+            <img src="Images/shyama tulsi.jpg" alt="Shyama Tulsi" />
+          </div>
+          <div class="product-content">
+            <h3>Shyama Tulsi</h3>
+            <p>
+              Holy herb with purplish leaves; boosts immunity, relieves stress,
+              and fights infections.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹29</span>
+              <span class="old">₹69</span>
+            </p>
+            <button onclick="addToCart('Shyama Tulsi')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="Papaya"
+          data-price="49"
+          data-category="kitchen"
+        >
+          <div class="product-image-container">
+            <img src="Images/Papita.jpg" alt="Papaya" />
+          </div>
+          <div class="product-content">
+            <h3>Papaya</h3>
+            <p>
+              Fast-growing fruit plant rich in enzymes and vitamins, good for
+              health.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹49</span>
+              <span class="old">₹99</span>
+            </p>
+            <button onclick="addToCart('Papaya')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="kela plant"
+          data-price="69"
+          data-category="kitchen"
+        >
+          <div class="product-image-container">
+            <img src="Images/Kela.jpg" alt="kela plant" />
+          </div>
+          <div class="product-content">
+            <h3>kela plant</h3>
+            <p>
+              Fruit-bearing plant with multipurpose use including cooking and
+              worship.
+            </p>
+            <p class="product-price">
+              <span class="label">Price:</span>
+              <span class="new">₹69</span>
+              <span class="old">₹110</span>
+            </p>
+            <button onclick="addToCart('kela plant')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div class="footer">
+      <p>&copy; Reserved by Shan Mohd</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
