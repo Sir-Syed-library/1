@@ -78,6 +78,13 @@ function filterAndSortProducts() {
   filtered.forEach((card) => grid.appendChild(card));
 }
 
+function addToCartFromButton(button) {
+  const card = button.closest(".product-card");
+  if (card) {
+    addToCart(card.dataset.name);
+  }
+}
+
 document
   .getElementById("searchInput")
   .addEventListener("input", filterAndSortProducts);
